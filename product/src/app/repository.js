@@ -1,5 +1,7 @@
 const Product = require("./model");
 const Category = require("./category-model");
+
+//Basically we write two methods that will get all cart items in our database and add an item to the cart model
 const Cart  = require("./cart-model");
 
 exports.products = async () => {
@@ -53,7 +55,7 @@ exports.update = async id => {
 }
 
 
-
+//populate function let you reference document in other collection
 exports.cart = async () => {
     const carts = await Cart.find().populate({
         path: "items.productId",

@@ -2,7 +2,7 @@ const cartRepository = require('./repository')
 const productRepository = require('./repository');
     exports.addItemToCart = async (req, res) => {
         const {
-            productId
+            productId , 
         } = req.body;
         const quantity = Number.parseInt(req.body.quantity);
         try {

@@ -22,7 +22,7 @@ let ItemSchema = new Schema({
     timestamps: true
 })
 const CartSchema = new Schema({
-    items: [ItemSchema],
+    items: [ItemSchema], // will hold the array of items in our cart
     subTotal: {
         default: 0,
         type: Number
